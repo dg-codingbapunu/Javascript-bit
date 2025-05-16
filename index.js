@@ -12,11 +12,19 @@
 // const parentResult = parent(5);
 // parentResult();
 
-const parentClick = () => {
-  alert("Parent click");
-};
+//  event bubling and capturing
 
-const childClick = (event) => {
-  alert("child click");
-  event.stopPropagation();
-};
+// const parentId = document.getElementById("parent");
+// const childId = document.getElementById("parent");
+
+// const parentClick = () => {
+//   alert("Parent click");
+// };
+
+// const childClick = (event) => {
+//   alert("child click");
+//   event.stopPropagation();
+// };
+
+// parentId.addEventListener("click", parentClick, true);
+// childId.addEventListener("click", childClick, true);
