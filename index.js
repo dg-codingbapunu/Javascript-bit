@@ -15,16 +15,27 @@
 //  event bubling and capturing
 
 // const parentId = document.getElementById("parent");
-// const childId = document.getElementById("parent");
+// const childId = document.getElementById("child");
 
-// const parentClick = () => {
+// const parentClick = () =>
 //   alert("Parent click");
 // };
 
 // const childClick = (event) => {
 //   alert("child click");
-//   event.stopPropagation();
 // };
 
 // parentId.addEventListener("click", parentClick, true);
 // childId.addEventListener("click", childClick, true);
+
+// setTime out && setInterval
+
+const timeId = setTimeout(() => {
+  console.log("byy bapun");
+}, 3000);
+
+const timeId2 = setInterval(() => {
+  console.log("byy sinu");
+}, 2000);
+
+clearInterval(timeId2);
