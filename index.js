@@ -30,12 +30,27 @@
 
 // setTime out && setInterval
 
-const timeId = setTimeout(() => {
-  console.log("byy bapun");
-}, 3000);
+// const timeId = setTimeout(() => {
+//   console.log("byy bapun");
+// }, 3000);
 
-const timeId2 = setInterval(() => {
-  console.log("byy sinu");
-}, 2000);
+// const timeId2 = setInterval(() => {
+//   console.log("byy sinu");
+// }, 2000);
 
-clearInterval(timeId2);
+// clearInterval(timeId2);
+
+// Call Back Function
+
+const firstFun = (name, callback) => {
+  setTimeout(() => {
+    console.log(`my name is ${name} `);
+    callback();
+  }, 3000);
+};
+
+const secondFun = () => {
+  console.log("panda");
+};
+
+firstFun("Patitapaban", secondFun);
