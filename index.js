@@ -42,15 +42,35 @@
 
 // Call Back Function
 
-const firstFun = (name, callback) => {
-  setTimeout(() => {
-    console.log(`my name is ${name} `);
-    callback();
-  }, 3000);
-};
+// const firstFun = (name, callback) => {
+//   setTimeout(() => {
+//     console.log(`my name is ${name} `);
+//     callback();
+//   }, 3000);
+// };
 
-const secondFun = () => {
-  console.log("panda");
-};
+// const secondFun = () => {
+//   console.log("panda");
+// };
 
-firstFun("Patitapaban", secondFun);
+// firstFun("Patitapaban", secondFun);
+
+// Promises
+
+let promise = new Promise(function (resolve, reject) {
+  let condition = true;
+
+  if (condition == true) {
+    resolve("This is resolved");
+  } else {
+    reject("This is rejected");
+  }
+});
+
+promise.then((res) => {
+  console.log("Sucsess :", res);
+});
+
+promise.catch((err) => {
+  console.log("Error", err);
+});
