@@ -57,20 +57,29 @@
 
 // Promises
 
-let promise = new Promise(function (resolve, reject) {
-  let condition = true;
+// let promise = new Promise(function (resolve, reject) {
+//   let condition = true;
 
-  if (condition == true) {
-    resolve("This is resolved");
-  } else {
-    reject("This is rejected");
-  }
-});
+//   if (condition == true) {
+//     resolve("This is resolved");
+//   } else {
+//     reject("This is rejected");
+//   }n
+// });
 
-promise.then((res) => {
-  console.log("Sucsess :", res);
-});
+// promise.then((res) => {
+//   console.log("Sucsess :", res);
+// });
 
-promise.catch((err) => {
-  console.log("Error", err);
-});
+// promise.catch((err) => {
+//   console.log("Error", err);
+// });
+
+// Async await
+
+async function myFunction() {
+  let apiCall = await fetch("https://fakestoreapi.com/products/1");
+  const data = await apiCall.json();
+  console.log(data);
+}
+myFunction();
