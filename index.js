@@ -86,26 +86,45 @@
 
 // Map Filter Reduce
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// map
+// // map
 
-const newArr = arr.map((item) => {
-  return item * item;
-});
-console.log(newArr);
+// const newArr = arr.map((item) => {
+//   return item * item;
+// });
+// console.log(newArr);
 
-// Filter
+// // Filter
 
-const filterArr = arr.filter((item) => {
-  return item % 2 == 0;
-});
-console.log(filterArr);
+// const filterArr = arr.filter((item) => {
+//   return item % 2 == 0;
+// });
+// console.log(filterArr);
 
-// Reduce
+// // Reduce
 
-const reduceArr = arr.reduce((prev, next) => {
-  return prev + next;
-});
+// const reduceArr = arr.reduce((prev, next) => {
+//   return prev + next;
+// });
 
-console.log(reduceArr);
+// console.log(reduceArr);
+
+// Fuction currying
+
+function multipy(a, b) {
+  return a * b;
+}
+console.log(multipy(2, 3));
+
+function curryingMulty(a) {
+  return function (b) {
+    return function (c) {
+      return a * b * c;
+    };
+  };
+}
+
+const result = curryingMulty(5);
+const result2 = result(3);
+console.log(result2(3));
