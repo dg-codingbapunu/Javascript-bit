@@ -112,19 +112,31 @@
 
 // Fuction currying
 
-function multipy(a, b) {
-  return a * b;
-}
-console.log(multipy(2, 3));
+// function multipy(a, b) {
+//   return a * b;
+// }
+// console.log(multipy(2, 3));
 
-function curryingMulty(a) {
-  return function (b) {
-    return function (c) {
-      return a * b * c;
-    };
-  };
-}
+// function curryingMulty(a) {
+//   return function (b) {
+//     return function (c) {
+//       return a * b * c;
+//     };
+//   };
+// }
 
-const result = curryingMulty(5);
-const result2 = result(3);
-console.log(result2(3));
+// const result = curryingMulty(5);
+// const result2 = result(3);
+// console.log(result2(3));
+
+// this keyword
+const Person = {
+  name: "Bapun",
+  age: 22,
+
+  greet: function () {
+    console.log("Hello Iam " + this.name);
+    console.log("Iam " + this.age + " year old");
+  },
+};
+Person.greet();
