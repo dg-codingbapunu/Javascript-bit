@@ -64,7 +64,7 @@
 //     resolve("This is resolved");
 //   } else {
 //     reject("This is rejected");
-//   }n
+//   }
 // });
 
 // promise.then((res) => {
@@ -77,9 +77,35 @@
 
 // Async await
 
-async function myFunction() {
-  let apiCall = await fetch("https://fakestoreapi.com/products/1");
-  const data = await apiCall.json();
-  console.log(data);
-}
-myFunction();
+// async function myFunction() {
+//   let apiCall = await fetch("https://fakestoreapi.com/products/1");
+//   const data = await apiCall.json();
+//   console.log(data);
+// }
+// myFunction();
+
+// Map Filter Reduce
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// map
+
+const newArr = arr.map((item) => {
+  return item * item;
+});
+console.log(newArr);
+
+// Filter
+
+const filterArr = arr.filter((item) => {
+  return item % 2 == 0;
+});
+console.log(filterArr);
+
+// Reduce
+
+const reduceArr = arr.reduce((prev, next) => {
+  return prev + next;
+});
+
+console.log(reduceArr);
