@@ -130,13 +130,26 @@
 // console.log(result2(3));
 
 // this keyword
-const Person = {
-  name: "Bapun",
-  age: 22,
+// const Person = {
+//   name: "Bapun",
+//   age: 22,
 
-  greet: function () {
-    console.log("Hello Iam " + this.name);
-    console.log("Iam " + this.age + " year old");
-  },
+//   greet: function () {
+//     console.log("Hello Iam " + this.name);
+//     console.log("Iam " + this.age + " year old");
+//   },
+// };
+// Person.greet();
+
+// Clousure
+const parent = (y) => {
+  let x = 10;
+
+  const child = () => {
+    console.log(x + y);
+  };
+  return child;
 };
-Person.greet();
+
+const parentResult = parent(5);
+parentResult();
